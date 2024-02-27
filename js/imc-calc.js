@@ -18,5 +18,23 @@ function calculate(){
     }else if(imc > 39.9){
         text=("Você está com obesidade mórbida");
     }
-    document.getElementById("text_area").innerText=text
+    document.getElementById("text_area").innerText="            seu imc é de: "+Math.round(imc)+"                    "+text;
+}
+
+function verification(){ 
+    let heigth=document.getElementById("heigth").value
+    let weigth=document.getElementById("weigth").value
+    console.log(heigth)
+    console.log(weigth)
+
+    if(heigth === "" || weigth === ""){
+        alert("Preencha todos os campos!")
+    }else{
+        calculate();
+    }
+}
+
+function runFunction(){
+    verification();
+    
 }
